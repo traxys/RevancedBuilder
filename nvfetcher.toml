@@ -1,0 +1,13 @@
+[revanced-cli]
+src.github = "revanced/revanced-cli"
+src.prefix = "v"
+fetch.url = "https://github.com/revanced/revanced-cli/releases/download/v$ver/revanced-cli-$ver-all.jar"
+
+[revanced-patches]
+src.github = "revanced/revanced-patches"
+src.prefix = "v"
+fetch.url = "https://github.com/revanced/revanced-patches/releases/download/v$ver/revanced-patches-$ver.jar"
+
+[revanced-integrations]
+src.github = "revanced/revanced-integrations"
+fetch.url = "https://github.com/revanced/revanced-integrations/releases/download/$ver/app-release-unsigned.apk"
