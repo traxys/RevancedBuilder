@@ -3,26 +3,26 @@
 {
   revanced-cli = {
     pname = "revanced-cli";
-    version = "2.9.3";
+    version = "2.10.1";
     src = fetchurl {
-      url = "https://github.com/revanced/revanced-cli/releases/download/v2.9.3/revanced-cli-2.9.3-all.jar";
-      sha256 = "sha256-aaSShWalQvLATloRFTNAIOfKPvTrZ1Kb/ihhCj8/6sw=";
+      url = "https://github.com/revanced/revanced-cli/releases/download/v2.10.1/revanced-cli-2.10.1-all.jar";
+      sha256 = "sha256-iG6PUvM2q96TT6AgzX7drNLsA6dc5cWRNinn3sPJPSA=";
     };
   };
   revanced-integrations = {
     pname = "revanced-integrations";
-    version = "v0.36.4";
+    version = "v0.36.6";
     src = fetchurl {
-      url = "https://github.com/revanced/revanced-integrations/releases/download/v0.36.4/app-release-unsigned.apk";
-      sha256 = "sha256-CXf9I1LVtVjy6mzayDzcdXGqGmA/mxV7WGjY+1/D14w=";
+      url = "https://github.com/revanced/revanced-integrations/releases/download/v0.36.6/app-release-unsigned.apk";
+      sha256 = "sha256-1dLlw1ehb/rA5sqcxUX8qnXFIgyDMGHh3XniC+lvPts=";
     };
   };
   revanced-patches = {
     pname = "revanced-patches";
-    version = "2.44.0";
+    version = "2.52.1";
     src = fetchurl {
-      url = "https://github.com/revanced/revanced-patches/releases/download/v2.44.0/revanced-patches-2.44.0.jar";
-      sha256 = "sha256-aIhWxk/TT7KbX9ESGKFyY7nZ6rmtvu1YaB0ZL9q3Fxg=";
+      url = "https://github.com/revanced/revanced-patches/releases/download/v2.52.1/revanced-patches-2.52.1.jar";
+      sha256 = "sha256-ij0sqDSBqCo6sDVLDraaINvKgZcq/xy/GVt8WYmYfiU=";
     };
   };
 }
