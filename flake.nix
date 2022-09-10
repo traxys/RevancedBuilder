@@ -38,7 +38,7 @@
         '';
       };
 
-	  revanced-integrations = pkgs.stdenv.mkDerivation rec {
+      revanced-integrations = pkgs.stdenv.mkDerivation rec {
         inherit (source.revanced-integrations) pname src version;
 
         nativeBuildInputs = [];
@@ -49,7 +49,7 @@
           mkdir -p $out
           mv *app-release-unsigned.apk $out/app-release-unsigned.apk
         '';
-	  };
+      };
     in {
       devShell = pkgs.mkShell {
         nativeBuildInputs = [
@@ -59,14 +59,15 @@
           (pkgs.stdenv.mkDerivation {
             name = "rv-patch";
             unpackPhase = "true";
+            buildInputs = [revanced-patches revanced-integrations revanced-cli];
             installPhase = ''
               mkdir -p $out/bin
               {
-              echo '#!/usr/bin/env bash'
-              echo 'java -jar \
-			  	${revanced-cli}/revanced-cli.jar \
-				-b ${revanced-patches}/revanced-patches.jar \
-				-m ${revanced-integrations}/app-release-unsigned.apk "$@"'
+                echo '#!/usr/bin/env bash'
+                echo 'java -jar \
+                 	${revanced-cli}/revanced-cli.jar \
+                -b ${revanced-patches}/revanced-patches.jar \
+                -m ${revanced-integrations}/app-release-unsigned.apk "$@"'
               } > $out/bin/rv-patch
               chmod +x $out/bin/rv-patch
             '';
